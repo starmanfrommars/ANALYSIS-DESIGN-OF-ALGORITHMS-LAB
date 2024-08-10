@@ -3,8 +3,8 @@
 
 void top(int ad[MAX][MAX], int n){
 	int f,count=0,flag=1,i,j,k;
-	int torder[100],in=1;
-	
+	int torder[100]={0},in=1;
+
 	while(flag){
 		count++;
 		for(i=1;i<=n;i++){
@@ -28,7 +28,7 @@ void top(int ad[MAX][MAX], int n){
 		printf("No topological order \n");
 	else {
 		printf("Topological sequence order\n");
-		for(i=1;i<=n;i++)
+		for(i=1;i<in;i++)
 			printf("%d\t",torder[i]);
 	}
 }
@@ -43,4 +43,4 @@ void main() {
 			scanf("%d",&ad[i][j]);
 	top(ad,n);
 }
-	
+
